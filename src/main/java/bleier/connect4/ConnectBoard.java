@@ -29,7 +29,8 @@ public class ConnectBoard {
 
     public boolean isFull(int col) {
         for (int i = 0; i < height; i++) {
-            if(board[i][col] == ' ') { return false;}
+            if (board[i][col] == ' ') {
+                return false; }
         }
 
         return true;
@@ -39,16 +40,14 @@ public class ConnectBoard {
         color = Character.toUpperCase(color);
         if (isFull(col)) {
             System.out.println("Column is Full");
-        }
-        else if(color == 'R' || color == 'Y' ) {
+        } else if (color == 'R' || color == 'Y') {
             for (int i = 0; i < height; i++) {
                 if (board[i][col] == ' ') {
                     board[i][col] = color;
                     break;
                 }
             }
-        }
-        else {
+        } else {
             System.out.println("Color must be R or Y");
         }
     }
@@ -67,28 +66,32 @@ public class ConnectBoard {
                             && board[r][c + 1] == token
                             && board[r][c + 2] == token
                             && board[r][c + 3] == token)  {
-                        return token;}
+                        return token;
+                    }
 
                     if (r + 3 < height) {
                         //check vertical
                         if (board[r + 1][c] == token
                                 && board[r + 2][c] == token
                                 && board[r + 3][c] == token) {
-                            return token;}
+                            return token;
+                        }
 
                         //check diagnol to right
                         if (c + 3 < width
                                 && board[r + 1][c + 1] == token
                                 && board[r + 2][c + 2] == token
                                 && board[r + 3][c + 3] == token) {
-                            return token;}
+                            return token;
+                        }
 
                         //check diagnol to left
                         if (c - 3 >= 0
                                 && board[r + 1][c - 1] == token
                                 && board[r + 2][c - 2] == token
                                 && board[r + 3][c - 3] == token) {
-                            return token;}
+                            return token;
+                        }
                     }
                 }
             }
