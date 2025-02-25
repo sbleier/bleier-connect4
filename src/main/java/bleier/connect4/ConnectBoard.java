@@ -30,7 +30,8 @@ public class ConnectBoard {
     public boolean isFull(int col) {
         for (int i = 0; i < height; i++) {
             if (board[i][col] == ' ') {
-                return false; }
+                return false;
+            }
         }
 
         return true;
