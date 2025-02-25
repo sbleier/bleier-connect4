@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class connectBoardTest {
+class ConnectBoardTest {
 
     @Test
     void isFull() {
@@ -15,7 +15,7 @@ class connectBoardTest {
                 {'Y', 'Y', 'Y', 'R', ' '},
                 {'Y', 'R', 'R', 'Y', ' '}
         };
-        connectBoard cBoard = new connectBoard(board);
+        ConnectBoard cBoard = new ConnectBoard(board);
 
         boolean full = cBoard.isFull(3);
 
@@ -24,7 +24,7 @@ class connectBoardTest {
 
     @Test
     void insert() {
-        connectBoard board = new connectBoard(7, 6);
+        ConnectBoard board = new ConnectBoard(7, 6);
 
         board.insert(4, 'r');
         char[][] cBoard = board.getBoard();
@@ -42,7 +42,7 @@ class connectBoardTest {
                 {'Y', 'R', 'Y', 'R', ' '},
                 {'Y', 'R', 'R', 'R', ' '}
         };
-        connectBoard cBoard = new connectBoard(board);
+        ConnectBoard cBoard = new ConnectBoard(board);
 
         char winner = cBoard.calcWinner();
 
@@ -59,7 +59,7 @@ class connectBoardTest {
                 {'Y', 'R', 'R', 'R', ' '},
                 {'Y', 'R', 'R', 'R', ' '}
         };
-        connectBoard cBoard = new connectBoard(board);
+        ConnectBoard cBoard = new ConnectBoard(board);
 
         char winner = cBoard.calcWinner();
 
@@ -76,7 +76,7 @@ class connectBoardTest {
                 {'Y', 'R', 'R', 'R', ' '},
                 {'R', 'R', 'R', 'Y', ' '}
         };
-        connectBoard cBoard = new connectBoard(board);
+        ConnectBoard cBoard = new ConnectBoard(board);
 
         char winner = cBoard.calcWinner();
 
@@ -93,7 +93,7 @@ class connectBoardTest {
                 {'Y', 'Y', 'R', 'R', ' '},
                 {'R', 'R', 'R', 'Y', ' '}
         };
-        connectBoard cBoard = new connectBoard(board);
+        ConnectBoard cBoard = new ConnectBoard(board);
 
         char winner = cBoard.calcWinner();
 
