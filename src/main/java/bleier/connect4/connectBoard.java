@@ -9,9 +9,9 @@ public class connectBoard {
     public connectBoard(double width, double height) {
         this.width = width;
         this.height = height;
-        board = new char[(int)height][(int)width];
-        for(int i = 0; i < height; i++) {
-            for(int j = 0; j < width; j++) {
+        board = new char[(int) height][(int) width];
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
                 board[i][j] = ' ';
             }
         }
@@ -63,21 +63,32 @@ public class connectBoard {
                 if (token != ' ') {
 
                     //check horizontal
-                    if (c + 3 < width && board[r][c + 1] == token && board[r][c + 2] == token && board[r][c + 3] == token)
-                        return token;
+                    if (c + 3 < width &&
+                            board[r][c + 1] == token &&
+                            board[r][c + 2] == token &&
+                            board[r][c + 3] == token)  {
+                        return token;}
 
                     if (r + 3 < height) {
                         //check vertical
-                        if (board[r + 1][c] == token && board[r + 2][c] == token && board[r + 3][c] == token)
-                            return token;
+                        if (board[r + 1][c] == token &&
+                                board[r + 2][c] == token &&
+                                board[r + 3][c] == token) {
+                            return token;}
 
                         //check diagnol to right
-                        if (c + 3 < width && board[r + 1][c + 1] == token && board[r + 2][c + 2] == token && board[r + 3][c + 3] == token)
-                            return token;
+                        if (c + 3 < width &&
+                                board[r + 1][c + 1] == token &&
+                                board[r + 2][c + 2] == token &&
+                                board[r + 3][c + 3] == token) {
+                            return token;}
 
                         //check diagnol to left
-                        if (c - 3 >= 0 && board[r + 1][c - 1] == token && board[r + 2][c - 2] == token && board[r + 3][c - 3] == token)
-                            return token;
+                        if (c - 3 >= 0 &&
+                                board[r + 1][c - 1] == token &&
+                                board[r + 2][c - 2] == token &&
+                                board[r + 3][c - 3] == token) {
+                            return token;}
                     }
                 }
             }
