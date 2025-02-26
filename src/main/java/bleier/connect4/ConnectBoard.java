@@ -2,11 +2,11 @@ package bleier.connect4;
 
 public class ConnectBoard {
 
-    private final double width;
-    private final double height;
+    private final int width;
+    private final int height;
     private char[][] board;
 
-    public ConnectBoard(double width, double height) {
+    public ConnectBoard(int width, int height) {
         this.width = width;
         this.height = height;
         board = new char[(int) height][(int) width];
